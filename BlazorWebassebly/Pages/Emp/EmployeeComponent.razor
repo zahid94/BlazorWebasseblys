@@ -1,0 +1,32 @@
+﻿@page "/employee"
+@inherits EmployeeComponentBase
+
+<h3>EmployeeComponent</h3>
+@if (Employees == null)
+{
+    <h1>We could not found any employee</h1>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Address</td>
+                    <td>@employee.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

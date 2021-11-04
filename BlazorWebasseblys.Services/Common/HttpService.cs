@@ -18,9 +18,9 @@ namespace BlazorWebasseblys.Services.Common
             httpClient.BaseAddress = new Uri("https://localhost:44307");
         }
 
-        public async Task<TEntity> Get(string url)
+        public async Task<IEnumerable<TEntity>> Get(string url)
         {
-            return await httpClient.GetFromJsonAsync<TEntity>(url);
+            return await httpClient.GetFromJsonAsync<IEnumerable<TEntity>>(url);
         }
 
         public async Task<object> Post(string url,TEntity entity)

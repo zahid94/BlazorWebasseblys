@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassebly", "BlazorWebassebly\BlazorWebassebly.csproj", "{45C68E32-438F-4CBE-93E3-0E3B2B8AE914}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A269E6BC-2A97-43F5-AF5A-26BBEE4F7E02} = {A269E6BC-2A97-43F5-AF5A-26BBEE4F7E02}
+		{CD444DF3-78AC-4C3C-8D1C-55AF0D1D5DBA} = {CD444DF3-78AC-4C3C-8D1C-55AF0D1D5DBA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebasseblys.Models", "BlazorWebasseblys.Models\BlazorWebasseblys.Models.csproj", "{CD444DF3-78AC-4C3C-8D1C-55AF0D1D5DBA}"
 EndProject
