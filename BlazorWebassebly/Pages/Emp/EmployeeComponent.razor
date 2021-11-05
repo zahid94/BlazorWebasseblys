@@ -1,5 +1,7 @@
 ﻿@page "/employee"
-@inherits EmployeeComponentBase
+@using BlazorWebasseblys.Models.Emp
+@inject BlazorWebasseblys.Services.IEmployeeService employeeService
+@implements IDisposable
 
 <h3>EmployeeComponent</h3>
 @if (Employees == null)
@@ -29,4 +31,19 @@ else
             }
         </tbody>
     </table>
+}
+
+@code{
+    public IList<Employee> Employees { get; set; }
+
+    protected override async Task<object> OnInitializedAsync()
+    {
+        Employees = await employeeService.GetEmployees("sample-data/employees.json");
+        return base.OnInitializedAsync();
+    }
+
+    public void Dispose()
+    {
+        GC.SuppressFinalize(this);
+    }
 }
